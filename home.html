@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Diary</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Courier New', monospace; /* Ensures uniform font */
+            background-color: #fff8dc; /* Parchment color */
+            color: #3e2723; /* Dark brown color */
+        }
+
+        nav {
+            background: linear-gradient(135deg, #8b4513, #6b4226); /* Dark brown gradient */
+            color: white;
+            padding: 1.5em;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.5em;
+            margin: 0 2em;
+            text-transform: uppercase;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+            color: #6d9f83; /* Soft green hover effect */
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 80vh;
+            text-align: center;
+            padding: 30px;
+            background: rgba(255, 248, 220, 0.9); /* Light parchment overlay */
+            border: 3px solid #8b4513;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 1.5em;
+            background-image: linear-gradient(90deg, #8b4513, #6d9f83, #3e5d47); /* Gradient using brown and green */
+            background-size: 200%;
+            background-clip: text;
+            color: transparent;
+            animation: gradientAnimation 5s infinite linear;
+            transition: transform 0.3s ease;
+        }
+
+        h1:hover {
+            transform: scale(1.15); /* Hover effect */
+        }
+
+        @keyframes gradientAnimation {
+            0% {background-position: 0%;}
+            100% {background-position: 200%;}
+        }
+
+        p {
+            font-size: 1.4em;
+            line-height: 1.9;
+            max-width: 800px;
+            margin: 1.5em auto;
+            color: #3e2723; /* Dark brown color */
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5em;
+            background-color: #e0e0e0;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="http://localhost:5000/add_entry">Create Diary</a>
+        <a href="mood.html">Mood Graph</a>
+        <a href="calender.html">View Entry</a> <!-- Changed Summary to View Entry -->
+    </nav>
+
+    <div class="container">
+        <h1>Welcome to AI Diary</h1>
+        <p>Start your writing adventure with AI Diary! This platform offers personalized suggestions, mood tracking, and daily summaries to enhance your journaling experience. Explore features like creating diary entries, viewing your mood graph, and generating insightful summaries.</p>
+    </div>
+
+    <!-- Optional footer -->
+    <!-- <footer>
+        &copy; 2025 AI Diary. All rights reserved.
+    </footer> -->
+</body>
+</html>
+
+

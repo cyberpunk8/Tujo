@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Courier New', monospace; /* Updated font type */
+            background-color: #fff8dc; /* Parchment color */
+            text-align: center;
+            color: #3e2723; /* Dark brown color */
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1 {
+            font-size: 2.5rem; /* Updated font size */
+            font-weight: bold;
+            margin: 0.5em 0;
+            color: #3e2723; /* Dark brown color */
+        }
+
+        p {
+            font-size: 1.2rem; /* Updated font size */
+            margin: 0.5em 0 2em;
+            color: #3e2723; /* Dark brown color */
+        }
+
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .form-container h2 {
+            font-size: 2rem; /* Updated font size */
+            color: #3e2723; /* Dark brown color */
+            margin-bottom: 1em;
+        }
+
+        .form-container input {
+            font-size: 1.2rem; /* Updated font size */
+            padding: 10px;
+            margin: 0.5em;
+            width: 80%;
+            max-width: 400px;
+            border-radius: 10px;
+            border: 2px solid #8b4513; /* Dark brown border */
+            color: #3e2723; /* Dark brown text color */
+            background-color: rgba(255, 248, 220, 0.9); /* Light parchment overlay */
+        }
+
+        .form-container button {
+            position: relative;
+            font-size: 1.2rem; /* Updated font size */
+            font-weight: bold;
+            height: 50px;
+            width: 80%;
+            max-width: 400px;
+            padding: 10px;
+            background-color: #8b4513; /* Dark brown background */
+            color: white; /* Button text color */
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s all ease;
+            font-family: 'Courier New', monospace; /* Uniform font */
+        }
+
+        .form-container button:hover {
+            background-color: #6b4226; /* Darker brown on hover */
+        }
+
+        .form-container button:active {
+            transform: scale(0.95);
+        }
+
+        .redirect {
+            margin-top: 1em;
+        }
+
+        .redirect a {
+            color: #3e2723; /* Dark brown color */
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .redirect a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<!-- <body>
+    <div class="container">
+        <h1>TuJo: The Technical Yujo</h1>
+        <p>Your Journey, Your Thoughts: <span style="font-weight: bold;">Discover, Reflect</span> and <span style="font-weight: bold;">Grow</span></p>
+
+        <div class="form-container">
+            <h2>Create Your Account</h2>
+            <form id="signupForm">
+                <input type="email" id="email" placeholder="Email" name="email" required><br>
+                <input type="password" id="password" placeholder="Password" name="password" required><br>
+                <input type="password" id="confirmPassword" placeholder="Confirm Password" name="confirmPassword" required><br>
+                <input type="text" id="profession" placeholder="Profession" name="profession" required><br>
+                <input type="text" id="areaOfInterest" placeholder="Area of Interest" name="areaOfInterest" required><br>
+                <button type="submit">Sign Up</button>
+            </form>
+            <div class="redirect">
+                <p>Already have an account? <a href="login.html">Login here</a>.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("signupForm").addEventListener("submit", async (e) => {
+            e.preventDefault();
+    
+            const password = document.getElementById("password").value;
+            const confirmPassword = document.getElementById("confirmPassword").value;
+    
+            // Check if passwords match
+            if (password !== confirmPassword) {
+                alert('Passwords do not match!');
+                return;
+            }
+    
+            const data = {
+                email: document.getElementById("email").value,
+                password: password,
+                profession: document.getElementById("profession").value,
+                areaOfInterest: document.getElementById("areaOfInterest").value
+            };
+    
+            // Send data to backend
+            const response = await fetch("http://localhost:3000/signup", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(data)
+            });
+    
+            // Handle the response from the backend
+            if (response.ok) {
+                window.location.href = 'login.html'; // Redirect to login page
+            } else {
+                const errorMessage = await response.text();
+                alert('Error during signup: ' + errorMessage);
+            }
+        });
+    </script>
+    </body> -->
+    <body>
+        <div class="container">
+        <div class="form-container">
+            <h2>Create Your Account</h2>
+        <!-- <h1>Signup</h1> -->
+        <form id="signupForm">
+            <input type="email" id="email" placeholder="Email" name="email" required><br>
+                <input type="password" id="password" placeholder="Password" name="password" required><br>
+                <input type="password" id="confirmPassword" placeholder="Confirm Password" name="confirmPassword" required><br>
+                <input type="text" id="profession" placeholder="Profession" name="profession" required><br>
+                <input type="text" id="areaOfInterest" placeholder="Area of Interest" name="areaOfInterest" required><br>
+                <button type="submit">Sign Up</button>
+            <!-- <label for="email">Email:</label> -->
+            <!-- <input type="email" id="email" name="email" required><br>
+    
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br>
+    
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required><br>
+    
+            <label for="profession">Profession:</label>
+            <input type="text" id="profession" name="profession"><br>
+    
+            <label for="areaOfInterest">Area of Interest:</label>
+            <input type="text" id="areaOfInterest" name="areaOfInterest"><br>
+    
+            <button type="submit">Signup</button> -->
+        </form>
+        <div class="redirect">
+            <p>Already have an account? <a href="login.html">Login here</a>.</p>
+        </div>
+    </div>
+</div>
+        <script>
+            document.getElementById('signupForm').addEventListener('submit', async (event) => {
+                event.preventDefault();
+    
+                const email = document.getElementById('email').value;
+                const password = document.getElementById('password').value;
+                const confirmPassword = document.getElementById('confirmPassword').value;
+                const profession = document.getElementById('profession').value;
+                const areaOfInterest = document.getElementById('areaOfInterest').value;
+    
+                try {
+                    const response = await fetch('/signup', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ email, password, confirmPassword, profession, areaOfInterest })
+                    });
+    
+                    const result = await response.json();
+                    alert(result.message);
+                } catch (error) {
+                    console.error('Error:', error);
+                    alert('Signup failed');
+                }
+            });
+        </script>
+    </body>
+</html>
